@@ -1,0 +1,116 @@
+﻿/*-----本体-----*/
+body{
+	background-color: #d3d3d3;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* コンテンツを中央に配置 */
+    margin: 0px;
+}
+
+/*-------フォントサイズ-------*/
+h1 { font-size: 50px; }
+h2 { 
+	font-size: 24px; 
+	font-weight: bold;/* フォント太さ */
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	border-top: 3px solid yellow;/* 上の線 */
+	border-bottom: 3px solid yellow;/* 下の線 */
+	color: yellow;/* フォント色 */
+	background-color: #444444;
+	text-align: center;/* テキストの位置 */
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding: 10px;
+}
+h3 { font-size: 20px; }
+p { font-size: 24px; }
+li{ font-size: 20px; }
+
+/*-------画面上部のバー-------*/
+nav {
+	width: 100%;
+	height: 230px;
+	padding-top: 5px;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	position: fixed;
+	justify-content: center;
+	background-color: #d3d3d3;
+	z-index: 10000;
+	top: 0;
+	left: 0;
+}
+.titleImg{
+	height: 170px;
+	object-fit: cover;
+	object-position:0% 50%;
+	animation-name:titleAnime;
+	animation-fill-mode:forwards;
+	animation-duration:1s;
+	animation-timing-function:ease;
+}
+
+@keyframes titleAnime{
+	0% {
+	  width: 0px;
+	}
+  
+	100% {
+	  width: 634px;
+	}
+}
+
+.menua{
+	display: block;
+	text-decoration: none;
+	color: #2b2b2b;
+	flex-grow: 1;
+	margin-right: 35px;
+}
+.menua:hover {
+	color: #FBE340;
+}
+
+/*-----ジャンプ位置調整-----*/
+a.anchor{
+	display: block;
+	padding-top: 220px;
+	margin-top: 0px;
+}
+
+/*-------レイアウト、装飾用-------*/
+/*-------横背景-------*/
+.sideR{
+	background-image: url(../image/back_2.png);
+	background-size: 100px;
+	background-position: right top;
+	width: 100vw; /* ビューポートの横幅いっぱいに広げる */
+	height: 100vh; /* ビューポートの縦幅いっぱいに広げる */
+	position: fixed; /* スクロールに追従させる */
+	top: 0;
+	left: 0;
+	z-index: -1; /* コンテンツよりも背面に配置 */
+}
+.sideL{
+	background-image: url(../image/back_2.png);
+	background-size: 100px;
+	background-position: left top;
+	width: 100vw; /* ビューポートの横幅いっぱいに広げる */
+	height: 100vh; /* ビューポートの縦幅いっぱいに広げる */
+	position: fixed; /* スクロールに追従させる */
+	top: 0;
+	right: 0;
+	z-index: -1; /* コンテンツよりも背面に配置 */
+}
+
+/*-------配置調整-------*/
+.text{
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+}
